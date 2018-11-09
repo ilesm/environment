@@ -13,7 +13,7 @@ set isfname+=32
 " Set to auto read when a file is changed from the outside
 set autoread
 
-" send to system clipboard: https://coderwall.com/p/g-d8rg
+" Send to system clipboard <https://coderwall.com/p/g-d8rg>
 set clipboard+=unnamed
 
 " For regular expressions turn magic on
@@ -25,7 +25,6 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
 
@@ -60,7 +59,7 @@ map <C-w>= <C-W>s
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 
-call plug#begin('~/.config/nvim/plugins')
+call plug#begin('~/.config/nvim-plugins')
 " Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Yggdroot/LeaderF'
 Plug 'gabrielelana/vim-markdown'
