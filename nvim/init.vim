@@ -6,8 +6,9 @@
 " -----------------------------------------------------------------------------
 "  Editor, formatting, other basic settings
 
-set autochdir
+" set autochdir
 set hidden
+set number
 set relativenumber
 
 " This adds 'space' to the list of allowed characters for filenames so that I
@@ -49,6 +50,12 @@ set nowritebackup
 set noswapfile
 set noundofile
 
+" -----------------------------------------------------------------------------
+"  Colour Scheme
+"
+
+colorscheme gruvbox
+set background=dark
 
 " -----------------------------------------------------------------------------
 "  My Stuff
@@ -108,14 +115,35 @@ let g:markdown_enable_spell_checking = 0
 "  CtrlP
 "
 let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_root_markers = ['.ctrlp_root']
+
+"let g:ctrlp_working_path_mode = 0
+
+
+" -----------------------------------------------------------------------------
+"  Silver Searcher
+"
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
 
 " -----------------------------------------------------------------------------
 "  Plugins
 
 call plug#begin('~/.config/nvim-plugins')
+Plug '/usr/local/opt/fzf'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'gabrielelana/vim-markdown'
 Plug 'godlygeek/tabular'
+Plug 'junegunn/fzf.vim'
 Plug 'hashivim/vim-terraform'
 " Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
