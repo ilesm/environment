@@ -50,12 +50,6 @@ set nowritebackup
 set noswapfile
 set noundofile
 
-" -----------------------------------------------------------------------------
-"  Colour Scheme
-"
-
-colorscheme gruvbox
-set background=dark
 
 " -----------------------------------------------------------------------------
 "  My Stuff
@@ -157,3 +151,9 @@ Plug 'vim-airline/vim-airline'
 " Plug 'Yggdroot/LeaderF'
 call plug#end()
 
+" -----------------------------------------------------------------------------
+"  Colour Scheme
+"
+
+silent! colorscheme gruvbox
+set background=dark
