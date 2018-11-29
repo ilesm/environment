@@ -50,6 +50,12 @@ set nowritebackup
 set noswapfile
 set noundofile
 
+" -----------------------------------------------------------------------------
+"  Colour Scheme
+"
+
+silent! colorscheme gruvbox
+set background=dark
 
 " -----------------------------------------------------------------------------
 "  My Stuff
@@ -134,6 +140,7 @@ endif
 
 call plug#begin('~/.config/nvim-plugins')
 Plug '/usr/local/opt/fzf'
+Plug 'Chiel92/vim-autoformat'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'gabrielelana/vim-markdown'
 Plug 'godlygeek/tabular'
@@ -151,9 +158,3 @@ Plug 'vim-airline/vim-airline'
 " Plug 'Yggdroot/LeaderF'
 call plug#end()
 
-" -----------------------------------------------------------------------------
-"  Colour Scheme
-"
-
-silent! colorscheme gruvbox
-set background=dark
