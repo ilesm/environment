@@ -33,6 +33,7 @@ set shiftwidth=4
 set tabstop=4
 
 set ignorecase
+set smartcase
 
 set nowrap
 set nospell
@@ -49,6 +50,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 set noundofile
+
+set wildmenu
+set wildmode=longest:full,full
 
 " -----------------------------------------------------------------------------
 "  Colour Scheme
@@ -73,9 +77,13 @@ augroup wiki
 augroup END
 
 nnoremap <Leader>1 :e ~/Dropbox-secure/nv/TODO.md<CR>
-nnoremap <Leader>2 :e ~/Dropbox-secure/nv/Archive\ 2018-10.md<CR>
+nnoremap <Leader>2 :e ~/Dropbox-secure/nv/Archive\ 2018-12.md<CR>
 nnoremap <Leader>m :silent !/Applications/Marked.app/Contents/Resources/mark "%"<CR>
 nnoremap <Leader>c :e ~/.config/nvim/init.vim<CR>
+
+nnoremap <Leader>e :e %:p:h<CR>
+
+nnoremap <Esc> :let @/ = ""<CR>
 
 
 " -----------------------------------------------------------------------------
