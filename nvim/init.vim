@@ -117,6 +117,7 @@ let g:terraform_align=1
 "  Markdown
 "
 let g:markdown_enable_spell_checking = 0
+let g:markdown_enable_leader_mappings = 0
 
 
 " -----------------------------------------------------------------------------
@@ -150,7 +151,7 @@ call plug#begin('~/.config/nvim-plugins')
 Plug '/usr/local/opt/fzf'
 Plug 'Chiel92/vim-autoformat'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'gabrielelana/vim-markdown'
+Plug 'ilesm/vim-markdown'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf.vim'
 Plug 'hashivim/vim-terraform'
