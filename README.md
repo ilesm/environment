@@ -7,6 +7,7 @@ To clone locally:
 
 To configure nvim:
 
+    mkdir ~/.config
     ln -s ~/code/environment/nvim ~/.config/nvim
 
 To configure tmux:
