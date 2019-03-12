@@ -5,12 +5,15 @@ To clone locally:
     cd ~/code
     git clone git@github.com:ilesm/environment.git
 
-To configure nvim:
+To configure `nvim`:
 
     mkdir ~/.config
     ln -s ~/code/environment/nvim ~/.config/nvim
 
-To configure tmux:
+To configure `tmux`:
 
-    ln -s ~/code/tmux/tmux.conf ~/.tmux.conf
+    ln -s ~/code/environment/tmux/tmux.conf ~/.tmux.conf
 
+`zsh`:
+
+    ln -s ~/code/environment/zsh/zshrc ~/.zshrc
