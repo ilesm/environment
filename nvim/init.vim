@@ -77,7 +77,7 @@ augroup wiki
 augroup END
 
 nnoremap <Leader>1 :e ~/Dropbox-secure/nv/TODO.md<CR>
-nnoremap <Leader>2 :e ~/Dropbox-secure/nv/Archive\ 2018-12.md<CR>
+nnoremap <Leader>2 :e ~/Dropbox-secure/nv/Archive\ 2019-06.md<CR>
 nnoremap <Leader>m :silent !/Applications/Marked.app/Contents/Resources/mark "%"<CR>
 nnoremap <Leader>c :e ~/.config/nvim/init.vim<CR>
 
