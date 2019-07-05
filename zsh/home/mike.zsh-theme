@@ -45,15 +45,10 @@ else
 fi
 local git_branch='$(git_prompt_info)%{$PR_NO_COLOR%}'
 
-#PROMPT="${user_host} ${current_dir} ${rvm_ruby} ${git_branch}$PR_PROMPT "
-#PROMPT="╭─${user_host} ${current_dir} ${rvm_ruby} ${git_branch}
-
-PROMPT="%{╭ %G%G%}${current_dir} ${user_host} ${rvm_ruby} ${git_branch}
-%{╰ %G%G%}$PR_PROMPT "
+PROMPT="${current_dir} ${user_host} ${rvm_ruby} ${git_branch}
+$PR_PROMPT "
 
 RPS1="${return_code}"
-
-RPROMPT='[%*]'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$PR_YELLOW%}‹"
 ZSH_THEME_GIT_PROMPT_SUFFIX="› %{$PR_NO_COLOR%}"
