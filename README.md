@@ -5,6 +5,16 @@ To clone locally:
     cd ~/code
     git clone git@github.com:ilesm/environment.git
 
+Install Salt:
+
+  Mac OS:
+
+    brew install salt
+
+  Ubuntu:
+
+    snap install salt
+
 To configure `nvim`:
 
     mkdir ~/.config
