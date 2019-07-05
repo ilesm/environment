@@ -1,0 +1,7 @@
+#!/bin/bash
+
+curl -o /tmp/bootstrap-salt.sh -L https://bootstrap.saltstack.com
+sudo sh bootstrap-salt.sh git develop
+
+
+# sudo salt-call --local state.apply salt-master --file-root=/tmp/salt-state --pillar-root=/tmp/salt-pillar --retcode-passthrough -l info
