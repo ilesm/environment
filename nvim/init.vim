@@ -77,7 +77,7 @@ augroup wiki
 augroup END
 
 nnoremap <Leader>1 :e ~/Dropbox-secure/nv/TODO.md<CR>
-nnoremap <Leader>2 :e ~/Dropbox-secure/nv/Archive\ 2019-06.md<CR>
+nnoremap <Leader>2 :e ~/Dropbox-secure/nv/Archive\ 2019-10.md<CR>
 nnoremap <Leader>m :silent !/Applications/Marked.app/Contents/Resources/mark "%"<CR>
 nnoremap <Leader>c :e ~/.config/nvim/init.vim<CR>
 
@@ -151,8 +151,12 @@ call plug#begin('~/.config/nvim-plugins')
 Plug '/usr/local/opt/fzf'
 Plug 'Chiel92/vim-autoformat'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ilesm/vim-markdown'
 Plug 'godlygeek/tabular'
+" Plug 'ilesm/vim-markdown'
+" Plug 'plasticboy/vim-markdown'
+" Plug 'tpope/vim-markdown'
+" Plug 'vim-pandoc/vim-pandoc'
+" Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'junegunn/fzf.vim'
 Plug 'hashivim/vim-terraform'
 " Plug 'itchyny/lightline.vim'
@@ -165,5 +169,6 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
 " Plug 'Yggdroot/LeaderF'
+Plug 'terryma/vim-expand-region'
 call plug#end()
 
