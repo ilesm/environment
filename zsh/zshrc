@@ -55,7 +55,7 @@ bindkey -v
 alias mvim="mvim --remote-silent"
 
 # Customize to your needs...
-export PATH=/usr/local/sbin:/usr/local/bin:~/.cabal/bin:/usr/local/opt/ruby/bin:~/bin:~/Dropbox/bin:~/filetrek/play-2.2.3:/usr/local/opt/ruby/bin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/opt/ruby/bin:~/.cabal/bin:~/bin:~/Dropbox/bin:$PATH
 export LEDGER=current.ledger
 
 if [ -f ~/.zshrc.local ]; then
