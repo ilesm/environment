@@ -1,7 +1,8 @@
 
+local module = {}
 
-function mikemike (line)
-    spaces, list, check, body = string.match(line, "^(%s*)([+*-]? ?)([x [%]]* ?)(.*)")
+function module.toggle_checkbox(line)
+    local spaces, list, check, body = string.match(line, "^(%s*)([+*-]? ?)([x [%]]* ?)(.*)")
     if spaces ~= nil then
         if check == "[x] " then
             check = ""
@@ -12,7 +13,10 @@ function mikemike (line)
         end
         return spaces .. list .. check .. body
     end
-    return "1" .. line
+    -- Shouldn't ever get here
+    return line
 end
+
+return module
 
 
