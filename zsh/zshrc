@@ -57,6 +57,8 @@ alias mvim="mvim --remote-silent"
 # Customize to your needs...
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/opt/ruby/bin:~/.cabal/bin:~/bin:~/Dropbox/bin:$PATH
 export LEDGER=current.ledger
+export HPE_USERNAME='michael.iles@microfocus.com'
+
 
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
