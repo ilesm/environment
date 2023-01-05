@@ -34,9 +34,8 @@ mod.listOfNameAndInst = {}
 for _, entry in pairs(tests) do
   local line = entry[1]
   local expected = entry[2]
-  -- table.insert(mod.listOfNameAndInst, { line, function()
-  mod.listOfNameAndInst:insert({ line, function()
-      actual = mikemike(line)
+  table.insert(mod.listOfNameAndInst, { line, function()
+      actual = m.toggle_checkbox(line)
       lu.assertEquals(actual, expected)
     end } )
 end
