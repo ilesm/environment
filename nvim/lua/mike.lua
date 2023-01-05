@@ -4,7 +4,7 @@ function mikemike (line)
     spaces, list, check, body = string.match(line, "^(%s*)([+*-]? ?)([x [%]]* ?)(.*)")
     if spaces ~= nil then
         if check == "[x] " then
-            check = "[ ] "
+            check = ""
         elseif check  == "[ ] " then
             check = "[x] "
         else
