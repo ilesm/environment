@@ -1,8 +1,6 @@
 lu = require('luaunit')
 m = require('mike-utils')
 
-local mod = {}
-
 local tests = {
 
   -- Good
@@ -24,6 +22,7 @@ local tests = {
   { " [whatever]", " [ ] [whatever]" },
   { " [ ] [whatever]", " [x] [whatever]" },
   { " [x] [whatever]", " [whatever]" },
+  { "", "    + [ ] " },
 
   -- Malformed
   { "[ abc", "[ ] [ abc" },
@@ -40,15 +39,15 @@ local tests = {
   { "[x] [ ]abc", "[ ]abc" },
 }
 
-mod.listOfNameAndInst = {}
+local listOfNameAndInst = {}
 
 for _, entry in pairs(tests) do
   local line = entry[1]
   local expected = entry[2]
-  table.insert(mod.listOfNameAndInst, { "'" .. line .. "'", function()
+  table.insert(listOfNameAndInst, { "'" .. line .. "'", function()
       actual = m.toggle_checkbox(line)
       lu.assertEquals(actual, expected)
     end } )
 end
 
-lu.LuaUnit:runSuiteByInstances(mod.listOfNameAndInst, "")
+lu.LuaUnit:runSuiteByInstances(listOfNameAndInst, "")
