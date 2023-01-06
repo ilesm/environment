@@ -31,6 +31,7 @@ set expandtab
 set smarttab 
 set shiftwidth=4
 set tabstop=4
+autocmd FileType markdown setlocal shiftwidth=2 tabstop=2
 
 set ignorecase
 set smartcase
