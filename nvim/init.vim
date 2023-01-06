@@ -31,7 +31,6 @@ set expandtab
 set smarttab 
 set shiftwidth=4
 set tabstop=4
-autocmd FileType markdown setlocal shiftwidth=2 tabstop=2
 
 set ignorecase
 set smartcase
@@ -66,16 +65,19 @@ set background=dark
 "  My Stuff
 "
 augroup notes
-    au!
-    au CursorHold,CursorHoldI,BufLeave *.md,*.rst silent update
-    au BufEnter,BufNew *.md,*.rst setlocal autoread 
+    autocmd!
+    autocmd CursorHold,CursorHoldI,BufLeave *.md,*.rst silent update
+    autocmd BufEnter,BufNew *.md,*.rst setlocal autoread 
+    autocmd FileType markdown setlocal shiftwidth=2 tabstop=2
 augroup END
 
 augroup wiki
-    au!
-    au CursorHold,CursorHoldI,BufLeave *.wiki silent update
-    au BufEnter,BufNew *.wiki setlocal autoread 
+    autocmd!
+    autocmd CursorHold,CursorHoldI,BufLeave *.wiki silent update
+    autocmd BufEnter,BufNew *.wiki setlocal autoread 
 augroup END
+
+autocmd BufEnter * silent! lcd %:p:h
 
 nnoremap <Leader>1 :e ~/Dropbox-secure/nv/TODO.md<CR>
 nnoremap <Leader>2 :e ~/Dropbox-secure/nv/Archive\ 2022-12.md<CR>
@@ -86,11 +88,7 @@ nnoremap <Leader>e :e %:p:h<CR>
 
 nnoremap <Esc> :let @/ = ""<CR>
 
-
-" -----------------------------------------------------------------------------
-"  My Lua Stuff
-"
-lua require('config')
+autocmd FileType netrw setl bufhidden=delete
 
 " -----------------------------------------------------------------------------
 "  Windows, splits
