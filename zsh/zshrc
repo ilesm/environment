@@ -55,7 +55,7 @@ bindkey -v
 alias mvim="mvim --remote-silent"
 
 # Customize to your needs...
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/opt/ruby/bin:~/.cabal/bin:~/bin:~/Dropbox/bin:$PATH
+export PATH=/usr/local/bin:~/bin:~/Dropbox/bin:$PATH
 export LEDGER=current.ledger
 export HPE_USERNAME='michael.iles@microfocus.com'
 
