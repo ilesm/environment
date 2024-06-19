@@ -80,8 +80,9 @@ augroup END
 autocmd BufEnter * silent! lcd %:p:h
 
 nnoremap <Leader>1 :e ~/Dropbox-secure/nv/TODO.md<CR>
-nnoremap <Leader>2 :e ~/Dropbox-secure/nv/Archive\ 2022-12.md<CR>
-nnoremap <Leader>m :silent !/Applications/Marked.app/Contents/Resources/mark "%"<CR>
+nnoremap <Leader>2 :e ~/Dropbox-secure/nv/Archive\ 2024-03.md<CR>
+" nnoremap <Leader>m :silent !/Applications/Marked.app/Contents/Resources/mark "%"<CR>
+nnoremap <Leader>m :MarkdownPreview<CR>
 nnoremap <Leader>c :e ~/.config/nvim/init.vim<CR>
 
 nnoremap <Leader>e :e %:p:h<CR>
@@ -175,12 +176,19 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'godlygeek/tabular'
 Plug 'hashivim/vim-terraform'
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'stephpy/vim-yaml'
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'rebelot/kanagawa.nvim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'sainnhe/everforest'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+Plug 'mihaifm/bufstop'
+Plug 'mrcjkb/haskell-tools.nvim', { 'version': '^3', 'ft': [ 'haskell', 'lhaskell', 'cabal', 'cabalproject' ] }
+Plug 'neovimhaskell/haskell-vim'
 call plug#end()
 
